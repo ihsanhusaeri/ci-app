@@ -10,14 +10,19 @@
                     <th>Action</th>
                 </thead>
                 <tbody>
-                    <th>1</th>
-                    <td>Ihsan Husaeri</td>
-                    <td>ihusaeri@gmail.com</td>
-                    <td>
-                        <a href="" class="badge badge-primary">detail</a>
-                        <a href="" class="badge badge-success">ubah</a>
-                        <a href="" class="badge badge-danger">hapus</a>
-                    </td>
+                    <?php $index = 1; ?>
+                    <?php foreach( $peoples as $p ) : ?>
+                        <tr>
+                            <th><?= $index++; ?></th>
+                            <td><?= $p['name']; ?></td>
+                            <td><?= $p['email']; ?></td>
+                            <td>
+                                <a href="" class="badge badge-warning">detail</a>
+                                <a href="" class="badge badge-success">ubah</a>
+                                <a href="" class="badge badge-danger">hapus</a>
+                            </td>
+                        </tr> 
+                    <?php endforeach; ?>
                 </tbody>
             </table>
         </div>
