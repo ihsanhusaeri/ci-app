@@ -11,5 +11,9 @@
             
             return $query->result_array();
         }
+
+        public function count_all_peoples() {
+            return $this->db->get( 'peoples' )->num_rows();
+        }
     }
 ?>

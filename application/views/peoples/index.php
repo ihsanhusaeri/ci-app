@@ -10,10 +10,9 @@
                     <th>Action</th>
                 </thead>
                 <tbody>
-                    <?php $index = 1; ?>
                     <?php foreach( $peoples as $p ) : ?>
                         <tr>
-                            <th><?= $index++; ?></th>
+                            <th><?= ++$start; ?></th>
                             <td><?= $p['name']; ?></td>
                             <td><?= $p['email']; ?></td>
                             <td>
@@ -25,6 +24,7 @@
                     <?php endforeach; ?>
                 </tbody>
             </table>
+            <?= $this->pagination->create_links(); ?>
         </div>
     </div>
 </div>
